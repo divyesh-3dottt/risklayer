@@ -1,0 +1,9 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+// https://vite.dev/config/
+export default defineConfig({
+  cacheDir: ".vite_cache", // Prevent creating node_modules for just the vite cache
+  plugins: [tailwindcss(), react()],
+});
